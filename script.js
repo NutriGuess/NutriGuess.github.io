@@ -101,7 +101,7 @@ function generateQuestion() {
   const amount2 = parseAmount(entry2[colIndex]);
   const unit = getUnit(nutrientName);
 
-  questionEl.textContent = `Which has more ${nutrientName}: ${entry1[0]} (${amount1}${unit}) or ${entry2[0]} (${amount2}${unit})?`;
+  questionEl.textContent = `Which has more ${nutrientName}: ${entry1[0]} (${entry1[1]}) or ${entry2[0]} (${entry2[1]})?`;
 
   const btn1 = document.createElement('button');
   btn1.textContent = entry1[0];
