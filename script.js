@@ -70,7 +70,12 @@ function markAnswer(isCorrect) {
   const amount2 = parseAmount(entry2[colIndex]);
 
 feedbackEl.innerHTML = `
-  <span class="${isCorrect ? 'correct' : 'incorrect'}">
+  <span style="
+    font-size: 50px; 
+    -webkit-text-stroke: 2px black; 
+    text-stroke: 2px black; /* for some browsers */
+    color: white; /* fill color to contrast with the stroke */
+  " class="${isCorrect ? 'correct' : 'incorrect'}">
     ${isCorrect ? "Correct!" : "Incorrect!"}
   </span><br><br>
   ${entry1[0]} has ${amount1}${unit} of ${nutrientName}<br>
