@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Sugena';
-  src: url('sugena.ttf') format('truetype');
+  font-family: 'Surgena';
+  src: url('surgena.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'Sugena', serif;
+  font-family: 'Surgena', serif;
   background: url("https://media.discordapp.net/attachments/1248039851823992935/1393711517714743336/lukas-blazek-f-TWhXOrLiU-unsplash.jpg?ex=68742a7f&is=6872d8ff&hm=dd493e8bbea03bdd5b022d5ce0b76b1fa11ce552fecea48c7ca3a69dab82e2e5&=&format=webp&width=1240&height=821") no-repeat center center fixed;
   background-size: cover;
   margin: 0;
