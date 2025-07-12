@@ -42,19 +42,19 @@ button {
   padding: 15px 25px;
   border-radius: 12px;
   border: 2px solid black;
-  background: #ADD8E6;
+  background: #bef0ff;
   color: black;
   cursor: pointer;
   transition: background 0.2s ease-in-out;
 }
 
 button:hover {
-  background: #b40000;
+  background: #6dd7fd;
 }
 
 .next-button {
   margin-top: 10px;
-  background: red;
+  background: #bef0ff;
   color: white;
 }
 
