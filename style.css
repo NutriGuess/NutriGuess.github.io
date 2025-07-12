@@ -67,7 +67,7 @@ button:hover {
 }
 
 .correct {
-  color: green;
+  color: #32CD32;
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 0.5em;
