@@ -12,9 +12,13 @@ const feedbackEl = document.getElementById('feedback');
 const scoreEl = document.getElementById('score');
 const nextBtn = document.getElementById('nextBtn');
 
+let currentQuestion = null;
+
 nextBtn.addEventListener('click', () => {
-  feedbackEl.textContent = '';
+  feedbackEl.innerHTML = '';
   nextBtn.classList.add('hidden');
+  questionEl.style.display = 'block';
+  buttonsEl.style.display = 'flex';
   answered = false;
   generateQuestion();
 });
@@ -48,19 +52,43 @@ function updateScore() {
   scoreEl.textContent = `Score: ${correctAnswers}/${total}`;
 }
 
-function markAnswer(correct) {
+function markAnswer(isCorrect) {
+  if (answered) return;
   answered = true;
-  nextBtn.classList.remove('hidden');
   total++;
-  feedbackEl.textContent = correct ? "Correct!" : "Incorrect!";
-  if (correct) correctAnswers++;
+  if (isCorrect) correctAnswers++;
   updateScore();
+
+  // Hide question and buttons
+  questionEl.style.display = 'none';
+  buttonsEl.style.display = 'none';
+
+  // Show feedback with format:
+  // Correct / Incorrect
+  // Item1 has amount of nutrient
+  // Item2 has amount of nutrient
+  // Next button
+
+  const [colIndex, nutrientName] = currentQuestion.nutrient;
+  const unit = getUnit(nutrientName);
+  const [entry1, entry2] = currentQuestion.entries;
+
+  const amount1 = parseAmount(entry1[colIndex]);
+  const amount2 = parseAmount(entry2[colIndex]);
+
+  feedbackEl.innerHTML = `
+    <strong>${isCorrect ? "Correct!" : "Incorrect!"}</strong><br>
+    ${entry1[0]} has ${amount1}${unit} of ${nutrientName}<br>
+    ${entry2[0]} has ${amount2}${unit} of ${nutrientName}
+  `;
+
+  nextBtn.classList.remove('hidden');
 }
 
 function generateQuestion() {
   buttonsEl.innerHTML = '';
-  const [colIndex, nutrientName] = getRandomNutrient();
-  const unit = getUnit(nutrientName);
+  const nutrient = getRandomNutrient();
+  const [colIndex, nutrientName] = nutrient;
 
   let entry1 = getRandomEntry();
   let entry2 = getRandomEntry();
@@ -68,8 +96,14 @@ function generateQuestion() {
     entry2 = getRandomEntry();
   }
 
+  currentQuestion = {
+    nutrient: nutrient,
+    entries: [entry1, entry2]
+  };
+
   const amount1 = parseAmount(entry1[colIndex]);
   const amount2 = parseAmount(entry2[colIndex]);
+  const unit = getUnit(nutrientName);
 
   questionEl.textContent = `Which has more ${nutrientName}: ${entry1[0]} (${amount1}${unit}) or ${entry2[0]} (${amount2}${unit})?`;
 
@@ -83,6 +117,11 @@ function generateQuestion() {
 
   buttonsEl.appendChild(btn1);
   buttonsEl.appendChild(btn2);
+
+  questionEl.style.display = 'block';
+  buttonsEl.style.display = 'flex';
+  feedbackEl.innerHTML = '';
+  nextBtn.classList.add('hidden');
 }
 
 fetch('nutrients.csv')
