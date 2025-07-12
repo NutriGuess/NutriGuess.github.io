@@ -71,6 +71,7 @@ button:hover {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 0.5em;
+  border: 2px solid white;
 }
 
 .incorrect {
@@ -78,4 +79,5 @@ button:hover {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 0.5em;
+  border: 2px solid white;
 }
