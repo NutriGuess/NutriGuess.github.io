@@ -1,9 +1,15 @@
 const canvas = document.getElementById('gameCanvas');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 const ctx = canvas.getContext('2d');
-let width = canvas.width = window.innerWidth;
-let height = canvas.height = window.innerHeight;
 
-const buttons = [];
+let width = canvas.width;
+let height = canvas.height;
+
+const font = '32px "Times New Roman"';
+const blackText = '#000';
+let nutrientData = [];
+let buttons = [];
 let correctAnswers = 0;
 let total = 0;
 let trivia = '';
@@ -11,9 +17,6 @@ let scoreFeedback = '';
 let showNextButton = false;
 let answered = false;
 
-const font = '32px "Times New Roman"';
-const pointerColor = '#000';
-const blackText = '#000';
 const nutrientIndexMap = [3, 4, 5, 6, 7];
 const nutrientNameMap = ["Calories", "Protein", "Sat Fat", "Fiber", "Carbs"];
 
@@ -32,15 +35,15 @@ function onscreenWords(text, posx, posy) {
   ctx.fillText(text, posx, posy);
 }
 
+function parseCSV(data) {
+  return data
+    .trim()
+    .split("\n")
+    .map(row => row.split(","));
+}
+
 function getRandomEntry() {
-  const entries = [
-    ["Banana", "89", "1.1", "0.1", "2.6", "22.8"],
-    ["Apple", "52", "0.3", "0", "2.4", "13.8"],
-    ["Broccoli", "55", "3.7", "0.1", "2.6", "11.2"],
-    ["Carrot", "41", "0.9", "0.1", "2.8", "9.6"],
-    ["Cheddar", "402", "25", "19", "0", "1.3"],
-  ];
-  return entries[Math.floor(Math.random() * entries.length)];
+  return nutrientData[Math.floor(Math.random() * nutrientData.length)];
 }
 
 function getRandomNutrient() {
@@ -137,7 +140,7 @@ function question() {
     () => markAnswer(amount2 > amount1)
   ));
 
-  return `Which has more ${nutrient[1]}?`;
+  return `Which has more ${nutrient[1]}: ${entry1[0]} (${amount1}${unit}) or ${entry2[0]} (${amount2}${unit})?`;
 }
 
 canvas.addEventListener('click', (e) => {
@@ -149,15 +152,14 @@ canvas.addEventListener('click', (e) => {
       btn.pressed = true;
     }
   });
-  if (showNextButton && 
+  if (showNextButton &&
       mouseX >= nextBtn.x && mouseX <= nextBtn.x + nextBtn.w &&
       mouseY >= nextBtn.y && mouseY <= nextBtn.y + nextBtn.h) {
     nextQuestion();
   }
 });
 
-let nextBtn = Button("Next", width / 2 - 50, 120, 100, 50, nextQuestion);
-trivia = question();
+let nextBtn = Button("Next", width / 2 - 50, 200, 100, 50, nextQuestion);
 
 function loop() {
   drawGradient();
@@ -169,4 +171,10 @@ function loop() {
   requestAnimationFrame(loop);
 }
 
-loop();
+fetch('nutrients.csv')
+  .then(res => res.text())
+  .then(text => {
+    nutrientData = parseCSV(text);
+    trivia = question();
+    loop();
+  });
