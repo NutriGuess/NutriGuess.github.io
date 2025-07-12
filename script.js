@@ -102,13 +102,13 @@ function generateQuestion() {
   const unit = getUnit(nutrientName);
 
 questionEl.innerHTML = `
-  <span style="font-size: 12px; font-weight: bold; color: black;">
+  <span style="font-size: 24px; font-weight: bold; color: black;">
     Which has more ${nutrientName}:
-  </span><br>
-  <span style="font-size: 24px; font-weight: bold; color: #CCC;">
+  </span><br><br>
+  <span style="font-size: 24px; font-weight: bold; color: black;">
     ${entry1[0]} (Quantity: ${entry1[1]})
   </span><br>
-  <span style="font-size: 24px; font-weight: bold; color: #CCC;">
+  <span style="font-size: 24px; font-weight: bold; color: black;">
     ${entry2[0]} (Quantity: ${entry2[1]})
   </span>
 `;
