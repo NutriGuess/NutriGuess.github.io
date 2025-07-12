@@ -1,9 +1,16 @@
+@font-face {
+  font-family: 'Sugena';
+  src: url('sugena.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
+  font-family: 'Sugena', serif;
   background: url("https://images.pexels.com/photos/413195/pexels-photo-413195.jpeg") no-repeat center center fixed;
   background-size: cover;
   margin: 0;
   padding: 0;
-  font-family: "Times New Roman", serif;
   display: flex;
   justify-content: center;
   align-items: center;
