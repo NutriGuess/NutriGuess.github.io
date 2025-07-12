@@ -76,11 +76,14 @@ function markAnswer(isCorrect) {
   const amount1 = parseAmount(entry1[colIndex]);
   const amount2 = parseAmount(entry2[colIndex]);
 
-  feedbackEl.innerHTML = `
-    <strong>${isCorrect ? "Correct!" : "Incorrect!"}</strong><br>
-    ${entry1[0]} has ${amount1}${unit} of ${nutrientName}<br>
-    ${entry2[0]} has ${amount2}${unit} of ${nutrientName}
-  `;
+feedbackEl.innerHTML = `
+  <span class="${isCorrect ? 'correct' : 'incorrect'}">
+    ${isCorrect ? "Correct!" : "Incorrect!"}
+  </span><br>
+  ${entry1[0]} has ${amount1}${unit} of ${nutrientName}<br>
+  ${entry2[0]} has ${amount2}${unit} of ${nutrientName}
+`;
+
 
   nextBtn.classList.remove('hidden');
 }
