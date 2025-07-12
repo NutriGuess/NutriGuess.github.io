@@ -72,7 +72,7 @@ function markAnswer(isCorrect) {
 feedbackEl.innerHTML = `
   <span class="${isCorrect ? 'correct' : 'incorrect'}">
     ${isCorrect ? "Correct!" : "Incorrect!"}
-  </span><br>
+  </span><br><br>
   ${entry1[0]} has ${amount1}${unit} of ${nutrientName}<br>
   ${entry2[0]} has ${amount2}${unit} of ${nutrientName}
 `;
