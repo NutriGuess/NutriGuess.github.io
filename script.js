@@ -4,7 +4,7 @@ let total = 0;
 let answered = false;
 
 const nutrientIndexMap = [3, 4, 5, 6, 7];
-const nutrientNameMap = ["Calories", "Protein", "Saturated Fat", "Fiber", "Carbs"];
+const nutrientNameMap = ["CALORIES", "PROTEIN", "SATURATED FAT", "FIBER", "CARBS"];
 
 const questionEl = document.getElementById('question');
 const buttonsEl = document.getElementById('buttons');
@@ -40,7 +40,7 @@ function getRandomNutrient() {
 }
 
 function getUnit(name) {
-  return { "Calories": "", "Protein": "g", "Saturated Fat": "g", "Fiber": "g", "Carbs": "g" }[name] || "";
+  return { "CALORIES": "", "PROTEIN": "g", "SATURATED FAT": "g", "FIBER": "g", "CARBS": "g" }[name] || "";
 }
 
 function parseAmount(value) {
