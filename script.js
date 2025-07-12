@@ -58,16 +58,9 @@ function markAnswer(isCorrect) {
   total++;
   if (isCorrect) correctAnswers++;
   updateScore();
-
-  // Hide question and buttons
+  
   questionEl.style.display = 'none';
   buttonsEl.style.display = 'none';
-
-  // Show feedback with format:
-  // Correct / Incorrect
-  // Item1 has amount of nutrient
-  // Item2 has amount of nutrient
-  // Next button
 
   const [colIndex, nutrientName] = currentQuestion.nutrient;
   const unit = getUnit(nutrientName);
