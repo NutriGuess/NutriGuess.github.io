@@ -104,7 +104,6 @@ button:hover {
 
 #volume-slider::-moz-range-track {
   background: #1c274c;
-  border-radius: 3px;
 }
 
 #volume-slider::-webkit-slider-thumb {
