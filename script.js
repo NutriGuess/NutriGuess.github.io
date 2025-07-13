@@ -181,14 +181,4 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   document.body.appendChild(playBtn);
-
 });
-
-
-
-
-
-
-
-
-
