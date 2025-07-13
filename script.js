@@ -111,7 +111,7 @@ questionEl.innerHTML = `
   </span>
   <br>
   <span style="display: block; text-align: center; font-size: 32px; font-weight: bold; color: black; white-space: nowrap;">
-    ${entry2[0].toUpperCase()} (Quantity: ${entry2[1].toUpperCase()})
+    ${entry2[0]} (Quantity: ${entry2[1]})
   </span>
 `;
 
@@ -121,10 +121,10 @@ questionEl.innerHTML = `
 
 
   const btn1 = document.createElement('button');
-  btn1.textContent = entry1[0];
+  btn1.textContent = entry1[0].toUpperCase();
   btn1.onclick = () => { if (!answered) markAnswer(amount1 > amount2); };
 
-  const btn2 = document.createElement('button');
+  const btn2 = document.createElement('button').toUpperCase();
   btn2.textContent = entry2[0];
   btn2.onclick = () => { if (!answered) markAnswer(amount2 > amount1); };
 
