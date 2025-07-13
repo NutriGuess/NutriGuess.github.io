@@ -73,13 +73,16 @@ function hasOrHave(word) {
   return word.endsWith('s') ? 'have' : 'has';
 }
 
+const nutrientLabel = nutrientName === "CALORIES" ? nutrientName : `of ${nutrientName}`;
+
 feedbackEl.innerHTML = `
   <span class="${isCorrect ? 'correct' : 'incorrect'}">
     ${isCorrect ? "Correct!" : "Incorrect!"}
   </span><br><br>
-  ${entry1[0]} ${hasOrHave(entry1[0])} ${amount1}${unit} of ${nutrientName}<br>
-  ${entry2[0]} ${hasOrHave(entry2[0])} ${amount2}${unit} of ${nutrientName}
+  ${entry1[0]} ${hasOrHave(entry1[0])} ${amount1}${unit} ${nutrientLabel}<br>
+  ${entry2[0]} ${hasOrHave(entry2[0])} ${amount2}${unit} ${nutrientLabel}
 `;
+
 
 
   nextBtn.classList.remove('hidden');
