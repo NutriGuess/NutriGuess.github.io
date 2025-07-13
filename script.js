@@ -80,7 +80,7 @@ feedbackEl.innerHTML = `
     ${isCorrect ? "Correct!" : "Incorrect!"}
   </span><br><br>
   ${entry1[0]} (${entry1[1]}) ${hasOrHave(entry1[0])} ${amount1}${unit} ${nutrientLabel}<br>
-  ${entry2[0]} (${entry1[2]}) ${hasOrHave(entry2[0])} ${amount2}${unit} ${nutrientLabel}
+  ${entry2[0]} (${entry2[1]}) ${hasOrHave(entry2[0])} ${amount2}${unit} ${nutrientLabel}
 `;
 
 
