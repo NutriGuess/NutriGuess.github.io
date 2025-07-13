@@ -184,7 +184,7 @@ window.addEventListener('DOMContentLoaded', () => {
           isPlaying = true;
         }).catch(error => console.error('Playback failed:', error));
       } else {
-        mysterious = true;
+        mysterious = false;
         audio.loop = true;
         audio.play().then(() => {
           playBtn.src = svgPause;
