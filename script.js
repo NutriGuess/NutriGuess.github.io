@@ -176,7 +176,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   playBtn.addEventListener('click', () => {
     if (!isPlaying) {
-      if (Math.random() < 0.5) {
+      if (Math.random() < 0.05) {
         audio2.loop = true;
         audio2.play().then(() => {
           playBtn.src = svgPause;
