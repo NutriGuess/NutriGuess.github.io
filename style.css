@@ -95,6 +95,7 @@ button:hover {
 
 #volume-slider {
   background: #1c274c;
+  -webkit-appearance: none;
 }
 
 #volume-slider::-moz-range-track {
