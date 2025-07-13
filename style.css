@@ -122,14 +122,8 @@ button:hover {
   margin-top: -5px; /* to center thumb vertically */
 }
 
-/* Thumb for Firefox */
 #volume-slider::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
   background: #1c274c;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
 }
 
 
