@@ -94,52 +94,36 @@ button:hover {
 }
 
 #volume-slider {
-  -webkit-appearance: none;
-  width: 100px;
-  height: 6px;
   background: #1c274c;
-  border-radius: 3px;
-  outline: none;
   cursor: pointer;
+  outline: none;
 }
 
-/* Track for Firefox */
+/* Firefox track */
 #volume-slider::-moz-range-track {
   background: #1c274c;
-  border-radius: 3px;
 }
 
-/* Thumb for WebKit browsers */
+/* WebKit thumb */
 #volume-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 16px;
-  height: 16px;
   background: #1c274c;
-  border-radius: 50%;
-  cursor: pointer;
   border: none;
-  margin-top: -5px; /* to center thumb vertically */
+  cursor: pointer;
 }
 
-/* Thumb for Firefox */
+/* Firefox thumb */
 #volume-slider::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
   background: #1c274c;
-  border-radius: 50%;
   border: none;
   cursor: pointer;
 }
 
-/* Optional: thumb focus */
-#volume-slider:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 5px 2px #1c274c;
-}
-
+/* Optional focus effect */
+#volume-slider:focus::-webkit-slider-thumb,
 #volume-slider:focus::-moz-range-thumb {
   box-shadow: 0 0 5px 2px #1c274c;
 }
+
 
 
 
