@@ -155,7 +155,8 @@ fetch('nutrients.csv')
   });
 
 window.addEventListener('DOMContentLoaded', () => {
-  let audio = document.getElementById('background-audio');
+  const audio = document.getElementById('background-audio');
+  const audio2 = document.getElementById('mysterious-secondary-audio');
   const playBtn = document.createElement('img');
 
   playBtn.style.position = 'fixed';
@@ -174,20 +175,25 @@ window.addEventListener('DOMContentLoaded', () => {
   playBtn.src = svgPlay;
 
   playBtn.addEventListener('click', () => {
-    if (Math.random() < 0.5) {
-      audio = document.getElementById('mysterious-secondary-audio');
-    } else {
-      audio = document.getElementById('background-audio');
-    }
     if (!isPlaying) {
-      audio.loop = true;
-      audio.play().then(() => {
-        playBtn.src = svgPause;
-        isPlaying = true;
-      }).catch(error => console.error('Playback failed:', error));
+      if (Math.random() < 0.5) {
+        audio2.loop = true;
+        audio2.play().then(() => {
+          playBtn.src = svgPause;
+          isPlaying = true;
+        }).catch(error => console.error('Playback failed:', error));
+      } else {
+        audio.loop = true;
+        audio.play().then(() => {
+          playBtn.src = svgPause;
+          isPlaying = true;
+        }).catch(error => console.error('Playback failed:', error));
+      }
     } else {
       audio.pause();
+      audio2.pause
       audio.currentTime = 0;
+      audio2.currentTime = 0;
       playBtn.src = svgPlay;
       isPlaying = false;
     }
