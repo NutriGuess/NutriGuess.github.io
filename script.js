@@ -178,7 +178,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const sliderContainer = document.createElement('div');
   sliderContainer.style.position = 'fixed';
-  sliderContainer.style.top = '12px'; //aaaaaaaaaaaaaaaaaaaaa
+  sliderContainer.style.top = '18px'; //aaaaaaaaaaaaaaaaaaaaa
   sliderContainer.style.left = '60px';
   sliderContainer.style.width = '100px';
   sliderContainer.style.height = '24px';
