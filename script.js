@@ -145,7 +145,7 @@ fetch('nutrients.csv')
   });
 
 
-window.addEventListener('DOMContentLoaded', () => { // hiiiiiiiiiiiiiiiiiiiiiiiii
+window.addEventListener('DOMContentLoaded', () => {
   const audio = document.getElementById('background-audio');
   const playBtn = document.createElement('img');
 
@@ -181,6 +181,7 @@ window.addEventListener('DOMContentLoaded', () => { // hiiiiiiiiiiiiiiiiiiiiiiii
   });
 
   document.body.appendChild(playBtn);
+  playBtn.click();
 });
 
 
