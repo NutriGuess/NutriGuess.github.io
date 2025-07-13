@@ -118,18 +118,41 @@ function capitalize(text) {
 }
 
   
-questionEl.innerHTML = `
-  <span style="display: block; text-align: center; font-size: 72px; font-weight: bold; color: black;">
-    Which has more ${nutrientName}?
-  </span>
-  <br>
-  <span style="display: block; text-align: center; font-size: 32px; font-weight: bold; color: black;">
-    ${capitalize(entry1[0])} (Quantity: ${entry1[1]})
-  </span>
-  <span style="display: block; text-align: center; font-size: 32px; font-weight: bold; color: black;">
-    ${capitalize(entry2[0])} (Quantity: ${entry1[1]})
-  </span>
-`;
+function setResponsiveText(el, html, maxFontSizes, minFontSizes) {
+  el.innerHTML = html;
+  const bigText = el.querySelector('span:nth-child(1)');
+  const smallText1 = el.querySelector('span:nth-child(3)');
+  const smallText2 = el.querySelector('span:nth-child(4)');
+  function fitText(span, maxSize, minSize) {
+    let fontSize = maxSize;
+    span.style.fontSize = fontSize + 'px';
+    while (span.scrollWidth > span.clientWidth && fontSize > minSize) {
+      fontSize--;
+      span.style.fontSize = fontSize + 'px';
+    }
+  }
+  fitText(bigText, maxFontSizes.big, minFontSizes.big);
+  fitText(smallText1, maxFontSizes.small, minFontSizes.small);
+  fitText(smallText2, maxFontSizes.small, minFontSizes.small);
+}
+setResponsiveText(
+  questionEl,
+  `
+    <span style="display: block; text-align: center; font-weight: bold; color: black;">
+      Which has more ${nutrientName}?
+    </span>
+    <br>
+    <span style="display: block; text-align: center; font-weight: bold; color: black;">
+      ${capitalize(entry1[0])} (Quantity: ${entry1[1]})
+    </span>
+    <span style="display: block; text-align: center; font-weight: bold; color: black;">
+      ${capitalize(entry2[0])} (Quantity: ${entry1[1]})
+    </span>
+  `,
+  { big: 72, small: 32 },
+  { big: 24, small: 16 }
+);
+
 
   const btn1 = document.createElement('button');
   btn1.textContent = capitalize(entry1[0]);
