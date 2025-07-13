@@ -93,15 +93,6 @@ button:hover {
   margin-bottom: 0.5em;
 }
 
-#volume-slider {
-  -webkit-appearance: none;
-  width: 100px;
-  height: 6px;
-  background: #1c274c;
-  border-radius: 3px;
-  outline: none;
-  cursor: pointer;
-}
 
 #volume-slider::-moz-range-track {
   background: #1c274c;
