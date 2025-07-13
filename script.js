@@ -79,8 +79,8 @@ feedbackEl.innerHTML = `
   <span class="${isCorrect ? 'correct' : 'incorrect'}">
     ${isCorrect ? "Correct!" : "Incorrect!"}
   </span><br><br>
-  ${entry1[0]} ${hasOrHave(entry1[0])} ${amount1}${unit} ${nutrientLabel}<br>
-  ${entry2[0]} ${hasOrHave(entry2[0])} ${amount2}${unit} ${nutrientLabel}
+  ${entry1[1]} of ${entry1[0]} ${hasOrHave(entry1[0])} ${amount1}${unit} ${nutrientLabel}<br>
+  ${entry1[2]} of ${entry2[0]} ${hasOrHave(entry2[0])} ${amount2}${unit} ${nutrientLabel}
 `;
 
 
@@ -123,10 +123,10 @@ questionEl.innerHTML = `
   </span>
   <br>
   <span style="display: block; text-align: center; font-size: 32px; font-weight: bold; color: black;">
-    ${capitalize(entry1[0])} (Quantity: ${entry1[1]})
+    ${entry1[1]} of ${capitalize(entry1[0])}
   </span>
   <span style="display: block; text-align: center; font-size: 32px; font-weight: bold; color: black;">
-    ${capitalize(entry2[0])} (Quantity: ${entry2[1]})
+    ${entry2[1]} of ${capitalize(entry2[0])}
   </span>
 `;
 
