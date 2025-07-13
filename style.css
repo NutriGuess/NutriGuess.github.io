@@ -103,13 +103,11 @@ button:hover {
   cursor: pointer;
 }
 
-/* Track for Firefox */
 #volume-slider::-moz-range-track {
   background: #1c274c;
   border-radius: 3px;
 }
 
-/* Thumb for WebKit browsers */
 #volume-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -119,7 +117,6 @@ button:hover {
   border-radius: 50%;
   cursor: pointer;
   border: none;
-  margin-top: -5px; /* to center thumb vertically */
 }
 
 #volume-slider::-moz-range-thumb {
