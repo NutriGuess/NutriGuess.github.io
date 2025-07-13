@@ -191,7 +191,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     } else {
       audio.pause();
-      audio2.pause
+      audio2.pause();
       audio.currentTime = 0;
       audio2.currentTime = 0;
       playBtn.src = svgPlay;
