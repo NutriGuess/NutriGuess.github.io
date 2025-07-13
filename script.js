@@ -150,8 +150,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const playBtn = document.createElement('img');
 
   playBtn.style.position = 'fixed';
-  playBtn.style.top = '15px';
-  playBtn.style.left = '15px';
+  playBtn.style.top = '10px';
+  playBtn.style.left = '10px';
   playBtn.style.width = '40px';
   playBtn.style.height = '40px';
   playBtn.style.cursor = 'pointer';
@@ -165,24 +165,51 @@ window.addEventListener('DOMContentLoaded', () => {
   let isPlaying = false;
   playBtn.src = svgPlay;
 
+  function tryPlay() {
+    audio.play().then(() => {
+      // Success! Update button and state
+      playBtn.src = svgPause;
+      isPlaying = true;
+      audio.loop = true;
+      clearInterval(playAttemptInterval);
+    }).catch(() => {
+      // Fail, will retry
+    });
+  }
+
+  // Try every 100ms to play
+  const playAttemptInterval = setInterval(() => {
+    if (!isPlaying) tryPlay();
+  }, 100);
+
   playBtn.addEventListener('click', () => {
     if (!isPlaying) {
-      audio.loop = true;
       audio.play().then(() => {
         playBtn.src = svgPause;
         isPlaying = true;
+        audio.loop = true;
+        clearInterval(playAttemptInterval);
       }).catch(error => console.error('Playback failed:', error));
     } else {
       audio.pause();
       audio.currentTime = 0;
       playBtn.src = svgPlay;
       isPlaying = false;
+
+      // Resume trying to play automatically
+      setTimeout(() => {
+        if (!isPlaying) {
+          playAttemptInterval = setInterval(() => {
+            if (!isPlaying) tryPlay();
+          }, 100);
+        }
+      }, 500);
     }
   });
 
   document.body.appendChild(playBtn);
-  playBtn.click();
 });
+
 
 
 
