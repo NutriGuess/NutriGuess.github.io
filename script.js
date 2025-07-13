@@ -113,7 +113,6 @@ questionEl.innerHTML = `
   <span style="display: block; text-align: center; font-size: 32px; font-weight: bold; color: black;">
     ${entry1[0]} (Quantity: ${entry1[1]})
   </span>
-  <br>
   <span style="display: block; text-align: center; font-size: 32px; font-weight: bold; color: black;">
     ${entry2[0]} (Quantity: ${entry2[1]})
   </span>
