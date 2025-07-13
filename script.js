@@ -92,7 +92,7 @@ function generateQuestion() {
 
   let entry1 = getRandomEntry();
   let entry2 = getRandomEntry();
-  while (entry1[0] === entry2[0]) {
+  while (entry1[0] === entry2[0] || entry1[colIndex] == entry2[colIndex]) {
     entry2 = getRandomEntry();
   }
 
