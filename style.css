@@ -142,8 +142,10 @@ button:hover {
   position: fixed;
   bottom: 10px;
   left: 10px;
-  width: 100px;
+  width: 200px;
   height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 
