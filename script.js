@@ -155,7 +155,7 @@ fetch('nutrients.csv')
   });
 
 window.addEventListener('DOMContentLoaded', () => {
-  const audio = document.getElementById('background-audio');
+  let audio = document.getElementById('background-audio');
   const playBtn = document.createElement('img');
 
   playBtn.style.position = 'fixed';
@@ -174,6 +174,11 @@ window.addEventListener('DOMContentLoaded', () => {
   playBtn.src = svgPlay;
 
   playBtn.addEventListener('click', () => {
+    if (math.random() < 0.5) {
+      audio = document.getElementById('mysterious-secondary-audio');
+    } else {
+      audio = document.getElementById('background-audio');
+    }
     if (!isPlaying) {
       audio.loop = true;
       audio.play().then(() => {
