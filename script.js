@@ -150,12 +150,12 @@ window.addEventListener('DOMContentLoaded', () => {
   const playBtn = document.createElement('img');
 
   playBtn.style.position = 'fixed';
-  playBtn.style.top = '10px';      // a little padding from top
-  playBtn.style.left = '10px';     // a little padding from left
+  playBtn.style.top = '10px';
+  playBtn.style.left = '10px';
   playBtn.style.width = '40px';
   playBtn.style.height = '40px';
   playBtn.style.cursor = 'pointer';
-  playBtn.style.zIndex = '9999';   // make sure it's on top
+  playBtn.style.zIndex = '9999';
   playBtn.draggable = false;
 
   const svgPlay = `data:image/svg+xml,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='12' cy='12' r='10' stroke='%231C274C' stroke-width='1.5'/%3e%3cpath d='M15.4137 10.941C16.1954 11.4026 16.1954 12.5974 15.4137 13.059L10.6935 15.8458C9.93371 16.2944 9 15.7105 9 14.7868L9 9.21316C9 8.28947 9.93371 7.70561 10.6935 8.15419L15.4137 10.941Z' stroke='%231C274C' stroke-width='1.5'/%3e%3c/svg%3e`;
@@ -165,9 +165,17 @@ window.addEventListener('DOMContentLoaded', () => {
   let isPlaying = true;
   playBtn.src = svgPause;
 
+  // Try to autoplay on load
+  audio.loop = true;
+  audio.play().catch(() => {
+    // Autoplay might be blocked until user interaction
+    // Optionally switch icon back or handle gracefully here
+    isPlaying = false;
+    playBtn.src = svgPlay;
+  });
+
   playBtn.addEventListener('click', () => {
     if (!isPlaying) {
-      audio.loop = true;
       audio.play().then(() => {
         playBtn.src = svgPause;
         isPlaying = true;
@@ -182,6 +190,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   document.body.appendChild(playBtn);
 });
+
 
 
 
