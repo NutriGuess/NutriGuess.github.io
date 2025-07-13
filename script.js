@@ -181,6 +181,18 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   document.body.appendChild(playBtn);
+
+  const tryClickInterval = setInterval(() => {
+  if (audio.paused) {
+    try {
+      playBtn.click();
+    } catch {
+      console.log("A")
+    }
+  } else {
+    clearInterval(tryClickInterval);
+  }
+}, 10);
 });
 
 
