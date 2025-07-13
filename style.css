@@ -95,6 +95,9 @@ button:hover {
 
 #volume-slider {
   -webkit-appearance: none;
+  margin-top: -5px
+  width: 100px;
+  height: 6px;
   background: #1c274c;
 }
 
