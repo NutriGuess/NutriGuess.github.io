@@ -174,7 +174,7 @@ window.addEventListener('DOMContentLoaded', () => {
   playBtn.src = svgPlay;
 
   playBtn.addEventListener('click', () => {
-    if (math.random() < 0.5) {
+    if (Math.random() < 0.5) {
       audio = document.getElementById('mysterious-secondary-audio');
     } else {
       audio = document.getElementById('background-audio');
