@@ -143,3 +143,24 @@ fetch('nutrients.csv')
     nutrientData = parseCSV(csv);
     generateQuestion();
   });
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  const audio = document.getElementById('background-audio');
+  const playBtn = document.getElementById('playMusicBtn');
+
+  playBtn.addEventListener('click', () => {
+    // Set audio to loop in JS
+    audio.loop = true;
+
+    // Play audio
+    audio.play()
+      .then(() => {
+        playBtn.style.display = 'none';
+      })
+      .catch((error) => {
+        console.error('Audio playback failed:', error);
+      });
+  });
+});
+
