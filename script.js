@@ -3,7 +3,7 @@ let correctAnswers = 0;
 let total = 0;
 let answered = false;
 
-const nutrientIndexMap = [4, 5, 6, 7, 8];
+const nutrientIndexMap = [2, 3, 4, 5, 6];
 const nutrientNameMap = ["CALORIES", "PROTEIN", "SATURATED FAT", "FIBER", "CARBS"];
 
 const questionEl = document.getElementById('question');
