@@ -122,10 +122,10 @@ button:hover {
 
 #musicArrow {
   position: fixed;
-  top: 50px;
+  top: 25px;
   left: 20px;
   width: 100px;
-  transform: rotate(30deg);
+  transform: rotate(50deg);
 }
 
 
