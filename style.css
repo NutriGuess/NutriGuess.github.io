@@ -120,14 +120,6 @@ button:hover {
   background: #1c274c;
 }
 
-#musicArrow {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  width: 32px; /* optional */
-  height: 32px; /* optional */
-}
-
 
 
 
