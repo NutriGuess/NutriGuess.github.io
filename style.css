@@ -132,16 +132,6 @@ button:hover {
   cursor: pointer;
 }
 
-/* Optional: thumb focus */
-#volume-slider:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 5px 2px #1c274c;
-}
-
-#volume-slider:focus::-moz-range-thumb {
-  box-shadow: 0 0 5px 2px #1c274c;
-}
-
-
 
 
 
