@@ -41,7 +41,7 @@ function getRandomNutrient() {
 }
 
 function getUnit(name) {
-  return { "CALORIES": "", "PROTEIN": "g", "SATURATED FAT": "g", "FIBER": "g", "CARBS": "g" }[name] || "";
+  return { "CALORIES": "", "PROTEIN": "g", "FAT": "g", "SATURATED FAT": "g", "FIBER": "g", "CARBS": "g" }[name] || "";
 }
 
 function parseAmount(value) {
