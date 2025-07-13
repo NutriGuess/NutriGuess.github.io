@@ -125,7 +125,7 @@ questionEl.innerHTML = `
   btn1.onclick = () => { if (!answered) markAnswer(amount1 > amount2); };
 
   const btn2 = document.createElement('button');
-  btn2.textContent = entry2[0];.
+  btn2.textContent = entry2[0];
   btn2.onclick = () => { if (!answered) markAnswer(amount2 > amount1); };
 
   buttonsEl.appendChild(btn1);
