@@ -94,35 +94,53 @@ button:hover {
 }
 
 #volume-slider {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 6px;
   background: #1c274c;
-  cursor: pointer;
+  border-radius: 3px;
   outline: none;
+  cursor: pointer;
 }
 
-/* Firefox track */
+/* Track for Firefox */
 #volume-slider::-moz-range-track {
   background: #1c274c;
+  border-radius: 3px;
 }
 
-/* WebKit thumb */
+/* Thumb for WebKit browsers */
 #volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
   background: #1c274c;
-  border: none;
+  border-radius: 50%;
   cursor: pointer;
+  border: none;
+  margin-top: -5px; /* to center thumb vertically */
 }
 
-/* Firefox thumb */
+/* Thumb for Firefox */
 #volume-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
   background: #1c274c;
+  border-radius: 50%;
   border: none;
   cursor: pointer;
 }
 
-/* Optional focus effect */
-#volume-slider:focus::-webkit-slider-thumb,
+/* Optional: thumb focus */
+#volume-slider:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 5px 2px #1c274c;
+}
+
 #volume-slider:focus::-moz-range-thumb {
   box-shadow: 0 0 5px 2px #1c274c;
 }
+
 
 
 
