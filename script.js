@@ -1,4 +1,4 @@
-const mysterious = true;
+let mysterious = true; // ;)
 let nutrientData = [];
 let correctAnswers = 0;
 let total = 0;
