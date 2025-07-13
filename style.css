@@ -146,7 +146,12 @@ button:hover {
   height: 30px;
   white-space: nowrap;
   overflow: hidden;
+  padding: 0;
+  text-align: center;
+  line-height: 30px;
+  box-sizing: border-box;
 }
+
 
 
 
