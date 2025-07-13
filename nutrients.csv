@@ -17,7 +17,7 @@ Cheese,1 cup,225,240,30,11,10,0,6,Dairy products
 Cheddar,1-in. cube,17,70,4,6,5,0,t,Dairy products
 Cream cheese,1 oz.,28,105,2,11,10,0,1,Dairy products
 Processed cheese,1 oz.,28,105,7,9,8,0,t,Dairy products
-Roquefort chees,1 oz.,28,105,6,9,8,0,t,Dairy products
+Roquefort cheese,1 oz.,28,105,6,9,8,0,t,Dairy products
 Swiss,1 oz.,28,105,7,8,7,0,t,Dairy products
 Raw eggs,2,100,150,12,12,10,0,t,Dairy products
 Scrambled Eggs,2,128,220,13,16,14,0,1,Dairy products
@@ -31,14 +31,13 @@ Olive oil,1T.,14,125,0,14,3,0,0,"Fats, Oils, Shortenings"
 Safflower seed oil,1 T.,14,125,0,14,3,0,0,"Fats, Oils, Shortenings"
 French dressing,1 T.,15,60,t,6,2,0,2,"Fats, Oils, Shortenings"
 Thousand Island sauce,1 T.,15,75,t,8,3,0,1,"Fats, Oils, Shortenings"
-Salt pork,2 oz.,60,470,3,55,,0,0,"Meat, Poultry"
+Salted pork,2 oz.,60,470,3,55,,0,0,"Meat, Poultry"
 Bacon,2 slices,16,95,4,8,7,0,1,"Meat, Poultry"
 Beef,3 oz.,85,245,23,16,15,0,0,"Meat, Poultry"
 Hamburger,3 oz.,85,245,21,17,15,0,0,"Meat, Poultry"
-Ground lean,3 oz.,85,185,24,10,9,0,0,"Meat, Poultry"
 Roast beef,3 oz.,85,390,16,36,35,0,0,"Meat, Poultry"
 Steak,3 oz.,85,330,20,27,25,0,0,"Meat, Poultry"
-Round Steak (lean),3 oz.,85,220,24,12,11,0,0,"Meat, Poultry"
+Lean round steak,3 oz.,85,220,24,12,11,0,0,"Meat, Poultry"
 Corned beef,3 oz.,85,185,22,10,9,0,0,"Meat, Poultry"
 Canned and corned beef hash,3 oz.,85,120,12,8,7,t,6,"Meat, Poultry"
 Pot-pie,1 pie,227,480,18,28,25,t,32,"Meat, Poultry"
@@ -55,7 +54,6 @@ Pork roast,3 oz.,85,310,21,24,21,0,0,"Meat, Poultry"
 Pork sausage,3 1/2 oz.,100,475,18,44,40,0,0,"Meat, Poultry"
 Turkey,3 1/2 oz.,100,265,27,15,0,0,0,"Meat, Poultry"
 Veal,3 oz.,85,185,23,9,8,0,0,"Meat, Poultry"
-Roast,3 oz.,85,305,13,14,13,0,0,"Meat, Poultry"
 Clams,3 oz.,85,87,12,1,0,0,2,"Fish, Seafood"
 Cod,3 1/2 oz.,100,170,28,5,0,0,0,"Fish, Seafood"
 Crab meat,3 oz.,85,90,14,2,0,0,1,"Fish, Seafood"
@@ -77,7 +75,7 @@ Swordfish,1 steak,100,180,27,6,0,0,0,"Fish, Seafood"
 Tuna,3 oz.,85,170,25,7,3,0,0,"Fish, Seafood"
 Artichoke,1 large,100,8-44,2,t,t,2,10,Vegetables A-E
 Asparagus,6 spears,96,18,1,t,t,0.5,3,Vegetables A-E
-Lima bean,1 cup,160,140,8,t,t,3.0,24,Vegetables A-E
+Lima beans,1 cup,160,140,8,t,t,3.0,24,Vegetables A-E
 Red kidney beans,1 cup,260,230,15,1,0,2.5,42,Vegetables A-E
 Bean sprouts,1 cup,50,17,1,t,0,0.3,3,Vegetables A-E
 Beet greens,1 cup,100,27,2,t,0,1.4,6,Vegetables A-E
@@ -115,7 +113,7 @@ Split cooked peas,4 cups,100,115,8,t,0,0.4,21,Vegetables R-Z
 Canned Peppers,1 pod,38,10,t,t,0,t,2,Vegetables R-Z
 Raw Peppers,1 large,100,25,1,t,0,1.4,6,Vegetables R-Z
 Baked Potatoes,1 med.,100,100,2,t,0,0.5,22,Vegetables R-Z
-French-fries,10 pieces,60,155,-1,7,3,0.4,20,Vegetables R-Z
+French fries,10 pieces,60,155,-1,7,3,0.4,20,Vegetables R-Z
 Mashed potatoes with milk and butter,1 cup,200,230,4,12,11,0.7,28,Vegetables R-Z
 pan-fried Potatoes,3/4 cup,100,268,4,14,6,0.40,33,Vegetables R-Z
 Steamed potatoes,1 med.,100,80,2,t,0,0.40,19,Vegetables R-Z
@@ -131,7 +129,7 @@ Tomato juice,1 cup,240,50,2,t,0,0.6,10,Vegetables R-Z
 Turnip greens,1 cup,145,45,4,1,0,1.8,8,Vegetables R-Z
 Steamed Turnips,1 cup,155,40,1,t,0,1.8,9,Vegetables R-Z
 Raw Watercress stems,1 cup,50,9,1,t,0,0.3,1,Fruits A-F
-Apple juice canned,1 cup,250,125,t,0,0,0,34,Fruits A-F
+canned Apple juice,1 cup,250,125,t,0,0,0,34,Fruits A-F
 Apple vinegar,1/3 cup,100,14,t,0,0,0,3,Fruits A-F
 Apples,1 med,130,70,t,t,0,1,18,Fruits A-F
 Apricots,1 cup,250,220,2,t,0,1,57,Fruits A-F
@@ -145,7 +143,7 @@ Cherries,1 cup,257,100,2,1,0,2,26,Fruits A-F
 Sweetened Cranberry sauce,1 cup,277,530,t,t,0,1.2,142,Fruits A-F
 Dates,1 cup,178,505,4,t,0,3.6,134,Fruits A-F
 Figs,3 med.,114,90,2,t,0,1,22,Fruits A-F
-Figs canned with syrup ,3,115,130,1,t,0,1,32,Fruits A-F
+Canned figs with syrup ,3,115,130,1,t,0,1,32,Fruits A-F
 Canned Fruit cocktail,1 cup,256,195,1,t,0,0.5,50,Fruits A-F
 Grapefruit sections,1 cup,250,170,1,t,0,0.5,44,Fruits G-P
 Grapefruit,1/2,285,50,1,t,t,1,14,Fruits G-P
@@ -153,10 +151,10 @@ Grapefruit juice,1 cup,250,100,1,t,0,1,24,Fruits G-P
 Grapes,1 cup,153,70,1,t,0,0.8,16,Fruits G-P
 Grape juice,1 cup,250,160,1,t,0,t,42,Fruits G-P
 Lemon juice,1/2 cup,125,30,t,t,0,t,10,Fruits G-P
-Lemonade frozen concentrate,6-oz. can,220,430,t,t,0,t,112,Fruits G-P
-Limeade frozen concentrate,6-oz. can,218,405,t,t,0,t,108,Fruits G-P
-Olives large,10,65,72,1,10,9,0.8,3,Fruits G-P
-Olives Ripe,10,65,105,1,13,12,1,1,Fruits G-P
+Frozen lemonade concentrate,6-oz. can,220,430,t,t,0,t,112,Fruits G-P
+Frozen limeade concentrate,6-oz. can,218,405,t,t,0,t,108,Fruits G-P
+Large olives,10,65,72,1,10,9,0.8,3,Fruits G-P
+Ripe olives,10,65,105,1,13,12,1,1,Fruits G-P
 Oranges,1 med.,180,60,2,t,t,1,16,Fruits G-P
 Orange juice,8 oz. or,250,112,2,t,0,0.2,25,Fruits G-P
 Papaya,1/2 med.,200,75,1,t,0,1.8,18,Fruits G-P
@@ -170,13 +168,13 @@ Prunes,1 cup,270,300,3,1,0,0.8,81,Fruits G-P
 Prune juice,1 cup,240,170,1,t,0,0.7,45,Fruits G-P
 Raisins,1/2 cup,88,230,2,t,0,0.7,82,Fruits R-Z
 Raspberries,1/2 cup,100,100,t,t,0,2,25,Fruits R-Z
-Rhubarb sweetened,1 cup,270,385,1,t,0,1.9,98,Fruits R-Z
+Sweetened Rhubarb,1 cup,270,385,1,t,0,1.9,98,Fruits R-Z
 Strawberries,1 cup,227,242,1,t,0,1.3,60,Fruits R-Z
 Tangerines,I med.,114,40,1,t,0,1,10,Fruits R-Z
 Watermelon,1 wedge,925,120,2,1,0,3.6,29,Fruits R-Z
 Biscuits,1,38,130,3,4,3,t,18,"Breads, cereals, fastfood,grains"
 Bran flakes,1 cup,25,117,3,t,0,0.10,32,"Breads, cereals, fastfood,grains"
-Bread cracked wheat,1 slice,23,60,2,1,1,0.10,12,"Breads, cereals, fastfood,grains"
+Cracked wheat bread,1 slice,23,60,2,1,1,0.10,12,"Breads, cereals, fastfood,grains"
 Rye,1 slice,23,55,2,1,1,0.10,12,"Breads, cereals, fastfood,grains"
 White bread,1-lb. loaf,454,"1,225",39,15,12,9.00,229,"Breads, cereals, fastfood,grains"
 Whole-wheat,1-lb. loaf,454,"1,100",48,14,10,67.50,216,"Breads, cereals, fastfood,grains"
@@ -234,11 +232,10 @@ Doughnuts,1,33,135,2,7,4,t,17,"Desserts, sweets"
 Gelatin,1 cup,239,155,4,t,t,0,36,"Desserts, sweets"
 Honey,2 T.,42,120,t,0,0,0,30,"Jams, Jellies"
 Ice cream,2 cups,300,250,0,0,12,10,0,"Desserts, sweets"
-Ices,1 cup,150,117,0,0,0,0,48,"Desserts, sweets"
 Jellies,1 T.,20,50,0,0,0,0,13,"Jams, Jellies"
 Molasses,1 T.,20,45,0,0,0,8,11,"Jams, Jellies"
 Cane Syrup,1 T.,20,50,0,0,0,0,13,"Jams, Jellies"
-"9"" diam. pie",1 slice,135,330,3,13,11,0.1,53,"Desserts, sweets"
+"9"" pie",1 slice,135,330,3,13,11,0.1,53,"Desserts, sweets"
 Cherry Pie,1 slice,135,340,3,13,11,0.1,55,"Desserts, sweets"
 Custard,1 slice,130,265,7,11,10,0,34,"Desserts, sweets"
 Lemon meringue,1 slice,120,300,4,12,10,0.1,45,"Desserts, sweets"
