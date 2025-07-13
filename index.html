@@ -12,10 +12,11 @@
     <div id="buttons" class="button-container"></div>
     <div id="feedback" class="feedback"></div>
     <button id="nextBtn" class="next-button hidden">Next</button>
-    <p id="score" style="font-size: 32px; font-weight: bold;">Score: 0/0</h1>
+    <p id="score" style="font-size: 32px; font-weight: bold;">Score: 0/0</p>
   </div>
   <audio id="background-audio" src="music.mp3"></audio>
-  <img id="playMusicBtn"></img>
+  <img id="playMusicBtn" style="position: fixed; top: 10px; left: 10px; width: 40px; height: 40px; cursor: pointer; z-index: 9999;" draggable="false" />
+  <div id="volumeSliderContainer" style="position: fixed; top: 24px; left: 60px; width: 100px; height: 24px; cursor: pointer; z-index: 9999; user-select: none;"></div>
   <script src="script.js"></script>
 </body>
 </html>
