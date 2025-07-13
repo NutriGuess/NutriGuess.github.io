@@ -148,8 +148,10 @@ button:hover {
   overflow: hidden;
   padding: 0;
   text-align: center;
-  line-height: 30px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
