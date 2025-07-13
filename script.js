@@ -1,3 +1,4 @@
+const mysterious = true;
 let nutrientData = [];
 let correctAnswers = 0;
 let total = 0;
@@ -176,13 +177,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
   playBtn.addEventListener('click', () => {
     if (!isPlaying) {
-      if (Math.random() < 0.05) {
+      if (Math.random() < 1 && !mysterious) {
         audio2.loop = true;
         audio2.play().then(() => {
           playBtn.src = svgPause;
           isPlaying = true;
         }).catch(error => console.error('Playback failed:', error));
       } else {
+        mysterious = true;
         audio.loop = true;
         audio.play().then(() => {
           playBtn.src = svgPause;
