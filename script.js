@@ -4,7 +4,7 @@ let total = 0;
 let answered = false;
 
 const nutrientIndexMap = [3, 4, 5, 6, 7];
-const nutrientNameMap = ["CALORIES", "PROTEIN", "SATURATED FAT", "FIBER", "CARBS"];
+const nutrientNameMap = ["CALORIES", "PROTEIN", "FAT", "SATURATED FAT", "FIBER", "CARBS"];
 
 const questionEl = document.getElementById('question');
 const buttonsEl = document.getElementById('buttons');
