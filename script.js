@@ -185,7 +185,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const sliderContainer = document.getElementById('div');
+  const sliderContainer = document.getElementById('sliderContainer');
   sliderContainer.style.position = 'fixed';
   sliderContainer.style.top = '18px'; //aaaaaaaaaaaaaaaaaaaaa
   sliderContainer.style.left = '60px';
