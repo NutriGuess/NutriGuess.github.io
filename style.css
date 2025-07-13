@@ -132,7 +132,7 @@ button:hover {
   font-weight: bold;
   font-size: 64px;
   position: fixed;
-  top: 20px;
+  top: 0px;
   left: 200px;
 }
 
