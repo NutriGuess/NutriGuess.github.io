@@ -105,16 +105,25 @@ function generateQuestion() {
   const amount2 = parseAmount(entry2[colIndex]);
   const unit = getUnit(nutrientName);
 
+
+function capitalize(text) {
+  return text
+    .split(" ")
+    .map(word => word[0]?.toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+  
 questionEl.innerHTML = `
   <span style="display: block; text-align: center; font-size: 72px; font-weight: bold; color: black;">
     Which has more ${nutrientName}?
   </span>
   <br>
   <span style="display: block; text-align: center; font-size: 32px; font-weight: bold; color: black;">
-    ${entry1[0]} (Quantity: ${entry1[1]})
+    ${capitalize(entry1[0])} (Quantity: ${entry1[1]})
   </span>
   <span style="display: block; text-align: center; font-size: 32px; font-weight: bold; color: black;">
-    ${entry2[0]} (Quantity: ${entry2[1]})
+    ${capitalize(entry2[0])} (Quantity: ${entry2[1]})
   </span>
 `;
 
@@ -204,7 +213,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const thumb = sliderContainer.querySelector('#thumb');
 
   // Slider track boundaries
-  const trackStart = 7;
+  const trackStart = 9;
   const trackEnd = 83;
   const trackLength = trackEnd - trackStart;
 
