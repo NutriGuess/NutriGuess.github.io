@@ -204,7 +204,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const thumb = sliderContainer.querySelector('#thumb');
 
   // Slider track boundaries
-  const trackStart = 10;
+  const trackStart = 9;
   const trackEnd = 83;
   const trackLength = trackEnd - trackStart;
 
