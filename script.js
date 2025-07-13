@@ -220,7 +220,7 @@ window.addEventListener('DOMContentLoaded', () => {
   function setThumbPosition(volume) {
     // volume: 0 to 1
     const x = trackStart + volume * trackLength;
-    thumb.setAttribute('transform', `translate(${x-2}, 5)`);
+    thumb.setAttribute('transform', `translate(${x-2}, 0)`);
   }
 
   // Initialize thumb position from current volume
