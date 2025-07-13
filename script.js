@@ -111,7 +111,7 @@ questionEl.innerHTML = `
   </span>
   <br>
   <span style="display: block; text-align: center; font-size: 32px; font-weight: bold; color: black; white-space: nowrap;">
-    ${entry2[0]} (Quantity: ${entry2[1]})
+    ${entry2[0].toUpperCase()} (Quantity: ${entry2[1].toUpperCase()})
   </span>
 `;
 
