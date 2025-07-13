@@ -245,6 +245,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (x > trackEnd) x = trackEnd;
     const volume = (x - trackStart) / trackLength;
     audio.volume = volume;
+    audio2.volume = volume;
     setThumbPosition(volume);
   }
 
